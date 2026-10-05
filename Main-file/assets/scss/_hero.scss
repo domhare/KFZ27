@@ -1,0 +1,450 @@
+.gt-hero-1 {
+    padding: 150px 0 100px;
+    position: relative;
+    z-index: 9;
+
+    @include breakpoint (max-xl){
+        padding-bottom: 100px;
+    }
+
+    @include breakpoint (max-lg){
+        padding-bottom: 0;
+    }
+
+    .gt-hero-content {
+        transform: translateY(150px);
+		opacity: 0;
+
+        @include breakpoint (max-md){
+            text-align: center;
+        }
+
+        h6 {
+            font-size: 18px;
+            font-weight: 600;
+            line-height: 1;
+            font-family: $gt-heading-font;
+            color: $gt-theme-color;
+            margin-bottom: 25px;
+
+            img {
+                margin-right: 8px;
+            }
+        }
+
+        h1 {
+            color: $gt-white;
+        }
+
+        p {
+            font-size: 18px;
+            color: #fff;
+            opacity: .7;
+            max-width: 700px;
+            margin-top: 35px;
+
+            @include breakpoint(max-md){
+                font-size: 16px;
+            }
+
+            @include breakpoint(max-sm){
+                font-size: 15px;
+            }
+        }
+
+        .gt-hero-button {
+            margin-top: 50px;
+            @include flex;
+            gap: 24px;
+
+            @include breakpoint(max-xl){
+               flex-wrap: wrap;
+               gap: 20px;
+            }
+
+            @include breakpoint(max-md){
+                margin-top: 30px;
+                justify-content: center;
+            }
+
+            .gt-theme-btn {
+                .gt-text-btn {
+                    border: 1px solid $gt-theme-color;
+
+                    &::after {
+                        background-color: $gt-theme-color;
+                    }
+
+                    &::after {
+                        background-color: $gt-white;
+                    }
+                }
+
+                &.gt-border-style {
+                    .gt-text-btn {
+                        border: 1px solid $gt-white;
+                        background: transparent;
+                    }
+                }
+            
+                &:hover {
+                    .gt-text-btn {
+                       color: $gt-header-color;
+                       border: 1px solid $gt-white;
+                    }
+            
+                    .gt-icon-btn {
+                        color: $gt-header-color;
+                    }
+                }
+            }
+        }
+    }
+
+    .gt-hero-image {
+        transform: translateX(400px);
+        opacity: 0;
+        position: relative;
+        z-index: 99;
+        visibility: hidden;
+
+        @include breakpoint (max-lg){
+            img {
+                @include imgw;
+            }
+        }
+    }
+
+    .gt-bg-shape {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        right: -100px;
+        z-index: -1;
+
+        @include breakpoint (max-xxxl){
+          right: -270px;
+        }
+
+        @include breakpoint (max-xxl){
+            display: none;
+        }
+
+        img {
+            height: 100%;
+        }
+    }
+}
+
+.gt-hero-2 {
+    padding: 145px 0 145px;
+    position: relative;
+    z-index: 9;
+
+    .gt-line-shape {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        z-index: -1;
+
+        img {
+            width: 100%;
+        }
+    }
+
+    .gt-hero-image {
+       margin-right: 30px;
+
+        @include breakpoint (max-xxl){
+           margin-right: 0;
+        }
+       
+        img {
+            @include imgw;
+        }
+    }
+
+    .gt-hero-content {
+       
+        @include breakpoint (max-md){
+            text-align: center;
+        }
+
+        h6 {
+            font-size: 18px;
+            font-weight: 600;
+            line-height: 1;
+            font-family: $gt-heading-font;
+            color: $gt-theme-color;
+            margin-bottom: 25px;
+
+            img {
+                margin-right: 8px;
+            }
+        }
+
+        h1 {
+            color: $gt-white;
+        }
+
+        p {
+            font-size: 18px;
+            color: #fff;
+            opacity: .7;
+            max-width: 700px;
+            margin-top: 35px;
+
+            @include breakpoint(max-md){
+                font-size: 16px;
+            }
+
+            @include breakpoint(max-sm){
+                font-size: 15px;
+            }
+        }
+
+        .gt-hero-button {
+            margin-top: 50px;
+            @include flex;
+            gap: 24px;
+
+            @include breakpoint(max-xl){
+               flex-wrap: wrap;
+               gap: 20px;
+            }
+
+            @include breakpoint(max-md){
+                margin-top: 30px;
+                justify-content: center;
+            }
+
+            .gt-theme-btn {
+                .gt-text-btn {
+                    border: 1px solid $gt-theme-color;
+
+                    &::after {
+                        background-color: $gt-theme-color;
+                    }
+
+                    &::after {
+                        background-color: $gt-white;
+                    }
+                }
+
+                &.gt-border-style {
+                    .gt-text-btn {
+                        border: 1px solid $gt-white;
+                        background: transparent;
+                    }
+                }
+            
+                &:hover {
+                    .gt-text-btn {
+                       color: $gt-header-color;
+                       border: 1px solid $gt-white;
+                    }
+            
+                    .gt-icon-btn {
+                        color: $gt-header-color;
+                    }
+                }
+            }
+
+            .video-btn {
+                width: 50px;
+                height: 50px;
+                line-height: 50px;
+                display: inline-block;
+                border-radius: 50%;
+                background-color: $gt-theme-color;
+                text-align: center;
+                position: relative;
+                color: $gt-white;
+
+                &::before {
+                    position: absolute;
+                    top: 50%;
+                    left: 50%;
+                    content: "";
+                    transform: translate(-50%,-50%);
+                    width: 70px;
+                    height: 70px;
+                    border-radius: 50%;
+                    border-radius: 77px;
+                    border: 2px solid $gt-theme-color;
+                    background: rgba(235, 51, 0, 0.24);
+                }
+
+                &.ripple {
+                    &::before,&::after {
+                        width: 70px;
+                        height: 70px;
+                        box-shadow: 0 0 0 0 rgba(235, 51, 0, 0.5);
+                    }
+                }
+            }
+        }
+    }
+}
+
+.hero-bg {
+	background-color: $gt-header-color;
+}
+
+.gt-hero-3 {
+    position: relative;
+    padding: 20px 0 0;
+
+    @include breakpoint (max-xl){
+        padding: 100px 0;
+    }
+
+    .hero-text {
+        letter-spacing: -4.8px;
+        -webkit-text-stroke: 1px $gt-theme-color;
+        -webkit-text-fill-color: transparent;
+        font-size: 160px;
+        font-weight: 700;
+        position: absolute;
+        line-height: 130px;
+        left: 40px;
+        transform: translateY(-50%) rotate(180deg);
+        font-family: $gt-heading-font;
+        text-transform: uppercase;
+        top: 50%;
+        writing-mode: vertical-rl;
+
+        @include breakpoint (max-xl4){
+            display: none;
+        }
+    }
+
+    .gt-hero-content {
+       
+        @include breakpoint (max-md){
+            text-align: center;
+        }
+
+        h6 {
+            font-size: 18px;
+            font-weight: 600;
+            line-height: 1;
+            font-family: $gt-heading-font;
+            color: $gt-theme-color;
+            margin-bottom: 25px;
+
+            img {
+                margin-right: 8px;
+            }
+        }
+
+        h1 {
+            color: $gt-white;
+        }
+
+        p {
+            font-size: 18px;
+            color: #fff;
+            opacity: .7;
+            max-width: 700px;
+            margin-top: 35px;
+
+            @include breakpoint(max-md){
+                font-size: 16px;
+            }
+
+            @include breakpoint(max-sm){
+                font-size: 15px;
+            }
+        }
+
+        .gt-hero-button {
+            margin-top: 50px;
+
+            @include breakpoint(max-md){
+                margin-top: 30px;
+               text-align: center;
+            }
+
+            .gt-theme-btn {
+                .gt-text-btn {
+                    border: 1px solid $gt-theme-color;
+
+                    &::after {
+                        background-color: $gt-theme-color;
+                    }
+
+                    &::after {
+                        background-color: $gt-white;
+                    }
+                }
+
+                &.gt-border-style {
+                    .gt-text-btn {
+                        border: 1px solid $gt-white;
+                        background: transparent;
+                    }
+                }
+            
+                &:hover {
+                    .gt-text-btn {
+                       color: $gt-header-color;
+                       border: 1px solid $gt-white;
+                    }
+            
+                    .gt-icon-btn {
+                        color: $gt-header-color;
+                    }
+                }
+            }
+        }
+    }
+
+    .gt-hero-image {
+        @include breakpoint (max-xl){
+            img {
+                @include imgw;
+            }
+        }
+    }
+}
+
+
+.gt-hero-section {
+    position: relative;
+
+    .swiper {
+        overflow: initial;
+    }
+
+    .gt-array-button {
+        display: grid;
+        position: absolute;
+        top: 50%;
+        left: 100px;
+        transform: translateY(-50%);
+
+        @include breakpoint (max-xxxl){
+           left: 0;
+        }
+
+        @include breakpoint (max-xxl){
+            display: none;
+        }
+    }
+
+    .swiper-slide.swiper-slide-active {
+        .gt-hero-content {
+            opacity: 1;
+            transform: translateY(0px);
+            transition: all 1500ms ease;
+        }
+        .gt-hero-image {
+            opacity: 1;
+            visibility: visible;
+            transform: translateX(0);
+            transition: all 2500ms ease;
+        }
+    }
+}

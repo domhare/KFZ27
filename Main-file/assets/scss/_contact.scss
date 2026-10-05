@@ -1,0 +1,459 @@
+.modal-common-wrap {
+    position: fixed;
+    z-index: 9999;
+    overflow-y: scroll;
+    max-height: 100vh;
+
+	.modal-content {
+		background: transparent;
+		border: unset;
+	}
+	.modal-header {
+		border-radius: 0;
+		padding: 0 0;
+		margin-left: auto;
+		border: unset;
+		background: $gt-white;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+        position: absolute;
+        top: 20px;
+        right: 20px;
+        z-index: 99;
+
+		.btn-close {
+			margin: 0 0;
+			padding: 0 0;
+			outline: none;
+			width: 40px;
+			height: 40px;
+		}
+	}
+	.modal-body {
+		background: $gt-white;
+		padding: 0 0;
+        
+        .gt-join-club-form {
+            .gt-join-club-image {
+                img {
+                    @include imgw;
+                }
+            }
+
+            .gt-join-club-content {
+                padding: 50px;
+
+                .gt-join-content {
+                    max-width: 570px;
+                    text-align: center;
+                    margin: 0 auto 0;
+                }
+
+                h3 {
+                    margin-bottom: 10px;
+                }
+
+                .form-clt {
+                    span {
+                        font-size: 18px;
+                        font-weight: 600;
+                        color: $gt-heading-font;
+                        color: $gt-header-color;
+                        padding-bottom: 12px;
+                        display: inline-block;
+                    }
+
+                    input,textarea {
+                        width: 100%;
+                        border: none;
+                        line-height: 1;
+                        padding: 18px 24px;
+                        line-height: 1;
+                        background-color: #F2F2F2;
+                        color: $gt-text-color;
+                    }
+
+                    textarea {
+                        padding-bottom: 120px;
+                    }
+
+                    .form {
+                        .single-select {
+                           
+                            border: none;
+                            font-size: 16px;
+                            font-weight: 400;
+                            outline: none;
+                            line-height: 1;
+                            height: initial;
+                            line-height: 1;
+                            padding: 18px 24px;
+                            line-height: 1;
+                            background-color: #F2F2F2;
+                            border-radius: 0;
+                
+                            &::after {
+                                right: 20px;
+                                border-bottom: 2px solid $gt-header-color;
+                                border-right: 2px solid $gt-header-color;
+                                margin-top: -5px;
+                                width: 8px;
+                                height: 8px;
+                            }
+
+                            span {
+                                margin-bottom: 0;
+                                color: $gt-text-color;
+                                padding-bottom: 0;
+                                font-weight: 400;
+                            }
+                
+                            .option {
+                                color: $gt-text-color;
+                            }
+                        }
+                
+                        .list {
+                            width: 100%;
+                        }
+                    }
+                }
+
+                .gt-button {
+                    .gt-icon-btn {
+                        background-color: $gt-header-color;
+
+                        &::after {
+                            background-color: $gt-theme-color;
+                        }
+                    }
+                }
+            }
+        }
+	}
+	.modal-dialog {
+		max-width: 850px;
+
+        &.style-shop-details {
+            max-width: 1380px;
+
+            .modal-header {
+                background-color: $gt-bg-color;
+            }
+
+            .gt-shop-details-wrapper {
+                padding: 30px;
+            }
+        }
+	}
+	
+}
+
+
+.gt-newsletter-wrapper {
+    @include flex;
+    justify-content: space-between;
+    position: relative;
+    width: 100%;
+    padding-top: 130px;
+
+    @include breakpoint (max-xl) {
+        flex-wrap: wrap;
+        gap: 30px;
+        padding-top: 100px;
+    }
+
+    @include breakpoint (max-lg) {
+        padding-top: 80px;
+    }
+
+
+    .gt-cta-content-wrapper {
+        @include flex;
+        justify-content: space-between;
+        gap: 70px;
+
+        @include breakpoint (max-xl) {
+            flex-wrap: wrap;
+            gap: 30px;
+        }
+
+        .gt-content {
+
+            h3 {
+                color: $gt-white;
+            }
+            p {
+                color: $gt-white;
+            }
+        }
+
+        .search-widget {
+            position: relative;
+            width: 570px;
+
+            @include breakpoint(max-xl) {
+                width: 100%;
+                max-width: 570px;
+            }
+    
+            input {
+                width: 100%;
+                border: none;
+                background-color: $gt-white;
+                position: relative;
+                font-size: 16px;
+                font-weight: 400;
+                padding: 18px 18px;
+                color: $gt-text-color;
+                border-radius: 0;
+                text-transform: capitalize;
+                border-radius: 4px;
+    
+                @include breakpoint(max-sm) {
+                    font-size: 16px;
+                }
+    
+                &::placeholder {
+                    color: $gt-text-color;
+                }
+            }
+    
+            button {
+                position: absolute;
+                right: 4px;
+                top: 4px;
+                bottom: 4px;
+                border-radius: 4px;
+    
+                &.gt-theme-btn {
+    
+                    @include breakpoint (max-xxs){
+                        position: static;
+                        margin-top: 20px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.contact-info-items {
+    display: flex;
+    gap: 20px;
+   
+   
+    .icon {
+        width: 56px;
+        height: 56px;
+        line-height: 56px;
+        background: $gt-theme-color;
+        text-align: center;
+        color: $gt-white;
+        font-size: 20px;
+        @include transition;
+        border-radius: 4px;
+
+        &:hover {
+            background-color: $gt-header-color;
+        }
+    }
+
+    .content {
+        h4 {
+            color: $gt-header-color;
+            margin-bottom: 5px;
+            font-size: 20px;
+            font-weight: 600;
+        }
+
+        h6 {
+            font-size: 16px;
+            font-weight: 400;
+            font-family: $gt-body-font;
+            color: $gt-text-color;
+            line-height: 150%;
+
+            a {
+                color: $gt-text-color;
+            }
+        }
+    }
+}
+
+
+.gt-contact-us-wrapper {
+    background-color: $gt-bg-color;
+    padding: 48px;
+    position: relative;
+    border-radius: 8px;
+
+    @include breakpoint (max-md) {
+        padding: 40px;
+    }
+
+    @include breakpoint (max-sm) {
+        padding: 30px;
+    }
+
+
+    h2 {
+        font-size: 48px;
+        margin-bottom: 48px;
+        text-align: center;
+
+        @include breakpoint (max-xl) {
+            margin-bottom: 30px;
+        }
+
+        @include breakpoint (max-md) {
+            font-size: 40px;
+        }
+
+        @include breakpoint (max-sm) {
+            font-size: 35px;
+        }
+    }
+
+    .form-clt {
+
+        span {
+            color: $gt-header-color;
+            display: inline-block;
+            margin-bottom: 10px;
+            font-size: 18px;
+            font-weight: 600;
+            font-family: $gt-heading-font;
+        }
+
+        input,textarea {
+            width: 100%;
+            outline: none;
+            border: none;
+            background-color: $gt-white;
+            padding-bottom: 20px;
+            padding: 16px 20px;
+            @include transition;
+            color: $gt-text-color;
+            font-size: 16px;
+            border-radius: 8px;
+
+            &::placeholder {
+                color: $gt-text-color;
+            }
+        }
+
+        textarea {
+            padding-bottom: 80px;
+            resize: none;
+        }
+    }
+
+    .contact-btn {
+        text-align: center;
+
+        @include breakpoint (max-xl) {
+           text-align: left;
+        }
+
+        button {
+            &.gt-theme-btn {
+                justify-content: center;
+    
+                .gt-icon-btn {
+                    background-color: $gt-header-color;
+    
+                    &::after {
+                        background-color: $gt-theme-color;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.gt-map-section {
+    margin-top: -130px;
+
+    @include breakpoint (max-xl) {
+        margin-top: 0;
+        margin-top: 100px;
+    }
+
+    @include breakpoint (max-lg) {
+        margin-top: 80px;
+    }
+}
+
+.gt-map-items {
+    
+    .googpemap {
+
+        iframe {
+            width: 100%;
+            height: 686px;
+
+            @include breakpoint (max-sm){
+                height: 300px;
+            }
+        }
+    }
+}
+
+
+.contact-form-wrapper-3 {
+    .contact-image {
+        position: absolute;
+        top: 443px;
+        left: 0;
+        bottom: 0px;
+        max-width: 1383px;
+
+        @include breakpoint (max-xxl){
+            left: -170px;
+        }
+
+        @include breakpoint (max-xl){
+            display: none;
+        }
+
+        img {
+            height: 100%;
+        }
+    }
+    .contact-form-box-3 {
+        background-color: $gt-white;
+        padding: 64px 48px;
+        border-radius: 0px 8px 8px 8px;
+        position: relative;
+        z-index: 9;
+
+        @include breakpoint (max-xl){
+            padding: 50px 30px;
+            margin-top: -20px;
+        }
+
+        form {
+            margin-top: 50px;
+
+            .form-clt {
+              
+                input,textarea {
+                    width: 100%;
+                    border: none;
+                    outline: none;
+                    background-color: #F5F5F5;
+                    width: 100%;
+                    padding: 18px 20px;
+                    color: $gt-text-color;
+                    border-radius: 4px;
+                }
+
+                textarea {
+                    padding-bottom: 90px;
+                }
+            }
+        }
+    }
+}

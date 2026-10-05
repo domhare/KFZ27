@@ -1,0 +1,382 @@
+.gt-project-items {
+    margin-top: 30px;
+
+    .gt-project-image-1 {
+        overflow: hidden;
+        border-radius: 8px;
+    
+        img {
+            @include imgw;
+            border-radius: 8px;
+        }
+    }
+
+    .gt-project-content {
+        border-radius: 0px 8px 8px 8px;
+        background: #F5F5F5;
+        padding: 30px;
+        margin-right: 130px;
+        margin-top: -80px;
+        position: relative;
+        z-index: 9;
+        opacity: 0;
+        visibility: hidden;
+
+        .gt-post-tag {
+            border-radius: 4px;
+            background-color: $gt-theme-color;
+            font-size: 16px;
+            font-weight: 400;
+            text-transform: capitalize;
+            color: $gt-white;
+            line-height: 1;
+            padding: 10px 13px;
+            display: inline-block;
+            margin-bottom: 15px;
+
+            &:hover {
+                background-color: $gt-header-color;
+            }
+        }
+
+        h3 {
+            a {
+                background-position: 0 95%;
+                background-repeat: no-repeat;
+                background-size: 0% 2px;
+                display: inline;
+                
+                &:hover {
+                    color: $gt-theme-color;
+                    background-size: 100% 2px;
+                    background-image: linear-gradient(180deg, $gt-theme-color 0%, $gt-theme-color 100%);
+                }
+            }
+        }
+
+        .gt-link-btn {
+            display: inline-block;
+            font-size: 16px;
+            font-weight: 600;
+            text-transform: uppercase;
+            font-family: $gt-heading-font;
+            text-decoration: underline;
+            margin-top: 15px;
+
+            &:hover {
+                color: $gt-theme-color;
+            }
+        }
+    }
+}
+
+.gt-project-wrapper {
+    margin-left: -6%;
+    margin-right: -30%;
+
+    @include breakpoint (max-xxxl){
+        margin-left: -8%;
+        margin-right: -32%;
+    }
+
+    @include breakpoint (max-lg){
+        margin-left: 0;
+        margin-right: 0;
+    }
+
+    .gt-project-slider .swiper-slide-active {
+        .gt-project-items {
+            .gt-project-content {
+                opacity: 1;
+                visibility: visible;
+            }
+        }
+    }
+}
+
+// .gt-project-section {
+    
+// }
+
+.gt-project-image-items {
+    margin-top: 30px;
+    position: relative;
+    overflow: hidden;
+
+    img {
+        @include imgw;
+        border-radius: 8px;
+    }
+
+    .gt-projet-content {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+        width: 100%;
+        max-width: 340px;
+        margin: 0 auto;
+        opacity: 0;
+        top: -150px;
+        opacity: 0;
+        @include transition;
+
+        p {
+            font-size: 16px;
+            font-weight: 400;
+            background-color: $gt-theme-color;
+            color: $gt-white;
+            padding: 10px 16px;
+            line-height: 1;
+            border-radius: 4px;
+            display: inline-block;
+        }
+
+        h3 {
+            a {
+                display: inline-block;
+                padding: 14px 18px;
+                background-color: $gt-white;
+                border-radius: 4px;
+                
+                &:hover {
+                    color: $gt-theme-color;
+                }
+            }
+        }
+    }
+
+    &.style-2 {
+        margin-top: 60px;
+
+        @include breakpoint (max-xl){
+            margin-top: 30px;
+        }
+    }
+
+    &:hover {
+        .gt-projet-content {
+            opacity: 1;
+            visibility: visible;
+            top: 50%;
+        }
+    }
+}
+
+.gt-project-section {
+    position: relative;
+    z-index: 9;
+
+    .gt-right-shape {
+        position: absolute;
+        bottom: 0;
+        right: 0;
+    }
+
+    .gt-array-button {
+        @include flex;
+        justify-content: space-between;
+        margin-top: 0;
+
+        @include breakpoint (max-lg){
+          display: none;
+        }
+
+
+        .array-prev {
+                background-color: #F5F5F5;
+
+                &:hover {
+                    background-color: $gt-theme-color;
+                }
+            } 
+    }
+}
+
+.gt-project-image-3 {
+    margin-top: 30px;
+    position: relative;
+
+    &::before {
+        @include before;
+        border-radius: 8px;
+        background: linear-gradient(0deg, rgba(22, 25, 33, 0.88) 0%, rgba(22, 25, 33, 0.88) 100%);
+        opacity: 0;
+        visibility: hidden;
+        @include transition;
+    }
+
+    img {
+        @include imgw;
+        border-radius: 8px;
+    }
+
+    .gt-content {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        background-color: $gt-white;
+        transform: translate(-50%,-50%);
+        padding: 22px 40px;
+        width: 100%;
+        text-align: center;
+        border-radius: 4px;
+        max-width: 350px;
+        opacity: 0;
+        visibility: visible;
+        @include transition;
+
+        h3 {
+            font-size: 20px;
+            margin-top: 5px;
+
+            a {
+                background-position: 0 95%;
+                background-repeat: no-repeat;
+                background-size: 0% 2px;
+                display: inline;
+                
+                &:hover {
+                    color: $gt-theme-color;
+                    background-size: 100% 2px;
+                    background-image: linear-gradient(180deg, $gt-theme-color 0%, $gt-theme-color 100%);
+                }
+            }
+        }
+    }
+
+    &:hover {
+        &::before {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        .gt-content {
+            opacity: 1;
+            visibility: visible;
+        }
+    }
+}
+
+.gt-project-section-3 {
+    position: relative;
+    z-index: 9;
+
+    .gt-array-button {
+        .array-prev {
+            background-color: #F5F5F5;
+
+            &:hover {
+                background-color: $gt-theme-color;
+            }
+        } 
+    }
+
+    .gt-right-shape {
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        z-index: -1;
+    }
+}
+
+.gt-project-details-wrapper {
+    .gt-project-details-items {
+        .gt-details-image {
+            img {
+                @include imgw;
+                border-radius: 8px;
+            }
+        }
+
+        .gt-details-content {
+            margin-top: 30px;
+
+            h2 {
+                margin-bottom: 20px;
+            }
+
+            .gt-list-area {
+                @include flex;
+                justify-content: space-between;
+                margin-top: 30px;
+                padding: 30px 0;
+
+                @include breakpoint (max-xl){
+                    flex-wrap: wrap;
+                    gap: 30px;
+                }
+
+                ul {
+                    li {
+                        font-size: 18px;
+                        color: $gt-header-color;
+                        margin-right: 8px;
+
+                        i {
+                            color: $gt-theme-color;
+                            margin-right: 10px;
+                        }
+
+                        &:not(:last-child){
+                            margin-bottom: 15px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .gt-project-category-list {
+        background-color: #F5F5F5;
+        padding: 30px;
+        border-radius: 10px;
+        margin-left: 20px;
+
+        @include breakpoint (max-xl){
+            margin-left: 0;
+        }
+
+        ul {
+            li {
+                @include flex;
+                justify-content: space-between;
+
+                &:not(:last-child){
+                    margin-bottom: 15px;
+                }
+
+                span {
+                    font-size: 18px;
+                    font-weight: 600;
+                    color: $gt-header-color;
+                }
+
+                .star {
+                    color: rgb(255, 193, 49);
+                }
+            }
+        }
+
+        .gt-social-icon {
+            @include flex;
+            gap: 16px;
+            margin-top: 30px;
+
+            a {
+                width: 32px;
+                height: 32px;
+                line-height: 32px;
+                text-align: center;
+                border-radius: 4px;
+                background: $gt-white;
+                color: $gt-header-color;
+
+                &:hover {
+                    background-color: $gt-theme-color;
+                    color: $gt-white;
+                }
+            }
+        }
+    }
+}

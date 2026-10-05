@@ -1,0 +1,133 @@
+// .gt-brand-section {
+
+//     .gt-brand-slider {
+//         padding: 25px 0;
+//         background-color: $gt-bg-color;
+
+//         .brand-image {
+//             text-align: center;
+//             filter: grayscale(100%);
+//             @include transition;
+//             opacity: .4;
+    
+//             &:hover {
+//                 filter: initial;
+//                 opacity: 1;
+//             }
+//         }
+    
+//         .swiper-slide.swiper-slide-active{
+//             .brand-image {
+//                 filter: initial;
+//                 opacity: 1;
+//             }
+//         }
+//     }
+
+//     &.style-bg {
+//         .gt-brand-slider {
+//             background-color: $gt-theme-color;
+//         }
+//     }
+// }
+
+.gt-brand-wrapper-1 {
+    margin-top: -80px;
+    position: relative;
+    z-index: 9;
+}
+
+.brand-wrapper {
+
+    .gt-array-items {
+        @include flex;
+        gap: 30px;
+        justify-content: center;
+        margin-bottom: 50px;
+        position: relative;
+
+        &::before {
+            position: absolute;
+            content: "";
+            top: 30px;
+            left: 0;
+            background-color: #D9D9D9;
+            width: 564px;
+            height: 2px;
+            opacity: 0.48;
+
+            @include breakpoint (max-xl) {
+                display: none;
+            }
+        }
+
+        &::after {
+            position: absolute;
+            content: "";
+            top: 30px;
+            right: 0;
+            background-color: #D9D9D9;
+            width: 564px;
+            height: 2px;
+            opacity: 0.48;
+
+            @include breakpoint (max-xl) {
+                display: none;
+            }
+        }
+
+
+        .array-prev {
+            background-color: $gt-white;
+
+            &:hover {
+                background-color: $gt-theme-color;
+                color: $gt-white;
+            }
+        }
+
+        .array-next {
+           
+            &:hover {
+                background-color: $gt-header-color;
+                color: $gt-white;
+            }
+        }
+    }
+
+    .brand-image {
+        text-align: center;
+        filter: grayscale(100%);
+        @include transition;
+        opacity: .4;
+
+        &:hover {
+            filter: initial;
+            opacity: 1;
+        }
+    }
+
+    .swiper-slide.swiper-slide-active{
+        .brand-image {
+            filter: initial;
+            opacity: 1;
+        }
+    }
+}
+
+.gt-brand-wrapper-1 {
+    padding: 48px 56px;
+    border-radius: 12px;
+    background: #0c0d12;
+
+    .gt-brand-image-1 {
+        text-align: center;
+    }
+}
+
+.gt-brand-section-3 {
+    padding: 50px 0;
+    border-radius: 4px;
+    border-top: 1.2px solid rgba(255, 255, 255, 0.16);
+    margin-top: 120px;
+}

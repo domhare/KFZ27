@@ -1,0 +1,168 @@
+.gt-faq-wrapper {
+    padding-bottom: 80px;
+    
+    .gt-faq-content {
+        .gt-faq-text {
+            margin-top: 25px;
+            color: $gt-white;
+            opacity: .7;
+        }
+
+        .gt-faq-button {
+            margin-top: 50px;
+            @include flex;
+            gap: 24px;
+
+            @include breakpoint(max-xl){
+               flex-wrap: wrap;
+               gap: 20px;
+            }
+
+            @include breakpoint(max-md){
+                margin-top: 30px;
+            }
+
+            .gt-theme-btn {
+                .gt-text-btn {
+                    border: 1px solid $gt-theme-color;
+
+                    &::after {
+                        background-color: $gt-theme-color;
+                    }
+
+                    &::after {
+                        background-color: $gt-white;
+                    }
+                }
+
+                &.gt-border-style {
+                    .gt-text-btn {
+                        border: 1px solid $gt-white;
+                        background: transparent;
+                    }
+                }
+            
+                &:hover {
+                    .gt-text-btn {
+                       color: $gt-header-color;
+                       border: 1px solid $gt-white;
+                    }
+            
+                    .gt-icon-btn {
+                        color: $gt-header-color;
+                    }
+                }
+            }
+        }
+    }
+
+    .faq-items {
+        background-color: #F5F5F5;
+        border-radius: 8px;
+        padding: 48px;
+
+        @include breakpoint (max-xxl){
+            padding: 10px;
+        }
+
+        .accordion {
+
+            .accordion-item {
+                border-radius: 8px;
+                border: none;
+                margin-bottom: 25px;
+                background: $gt-white;
+                padding: 0;
+    
+                h2 {
+                    button {
+                        font-size: 20px;
+                        line-height: 1;
+                        font-weight: 800;
+                        box-shadow: none;
+                        border-radius: 0 !important;
+                        padding: 24px 30px;
+                        font-family: $gt-heading-font;
+                        color: $gt-header-color;
+                        border-radius: 8px !important;
+                        border-bottom-left-radius: 0 !important;
+                        border-bottom-right-radius: 0 !important;
+    
+                        @include breakpoint (max-sm){
+                            font-size: 14px;
+                            padding: 22px 16px;
+                        }
+                    }
+                }
+                .accordion-body {
+                  padding: 20px 30px;
+
+                   @include breakpoint (max-sm){
+                        padding: 18px 16px;
+                    }
+    
+                    p {
+                        color: $gt-text-color;
+                        font-size: 1x;
+                        line-height: 32px;
+                        font-weight: 400;
+                        font-size: 16px;
+    
+                        @include breakpoint(max-sm) {
+                            width: 100%;
+                            font-size: 14px;
+                            line-height: 28px;
+                        }
+                    }
+                }
+            }
+            .accordion-button {
+                background-color: $gt-theme-color;
+                color: $gt-white !important;
+                border-radius: 8px;
+    
+                &::after {
+                    display: none;
+                }
+                &::before {
+                    position: absolute;
+                    content: "\e902";
+                    font-family: 'icomoon' !important;
+                    font-weight: 700;
+                    transform: rotate(90deg);
+                    top: 13px;
+                    right: 22px;
+                    font-size: 14px;
+                    text-align: center;
+                    @include transition;
+                    color: $gt-theme-color;
+                    width: 40px;
+                    height: 40px;
+                    line-height: 40px;
+                    text-align: center;
+                    border-radius: 4px;
+                    background-color: $gt-white;
+
+                     @include breakpoint (max-sm){
+                       right: 16px;
+                    }
+                }
+            }
+            .accordion-button.collapsed {
+                background-color: transparent;
+                color: $gt-header-color !important;
+                
+                &::before {
+                    font-family: 'icomoon' !important;
+                    color: $gt-white;
+                    background-color: $gt-theme-color;
+                }
+            }
+        }
+    }
+}
+
+
+
+
+  
