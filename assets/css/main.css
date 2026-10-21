@@ -43,7 +43,7 @@ Version: 1.0.0
   --gt-body: #fff;
   --gt-black: #000;
   --gt-white: #fff;
-  --gt-theme: #EB3300;
+  --gt-theme: #005CA9;
   --gt-header: #161921;
   --gt-text: #696B72;
   --gt-border: #FCFCFC;
@@ -966,22 +966,22 @@ span {
 
 @-webkit-keyframes rippleOne {
   70% {
-    -webkit-box-shadow: 0 0 0 40px rgba(244, 68, 56, 0);
-    box-shadow: 0 0 0 40px rgba(244, 68, 56, 0);
+    -webkit-box-shadow: 0 0 0 40px rgba(0, 92, 169, 0);
+    box-shadow: 0 0 0 40px rgba(0, 92, 169, 0);
   }
   100% {
-    -webkit-box-shadow: 0 0 0 0 rgba(244, 68, 56, 0);
-    box-shadow: 0 0 0 0 rgba(244, 68, 56, 0);
+    -webkit-box-shadow: 0 0 0 0 rgba(0, 92, 169, 0);
+    box-shadow: 0 0 0 0 rgba(0, 92, 169, 0);
   }
 }
 @keyframes rippleOne {
   70% {
-    -webkit-box-shadow: 0 0 0 40px rgba(244, 68, 56, 0);
-    box-shadow: 0 0 0 40px rgba(244, 68, 56, 0);
+    -webkit-box-shadow: 0 0 0 40px rgba(0, 92, 169, 0);
+    box-shadow: 0 0 0 40px rgba(0, 92, 169, 0);
   }
   100% {
-    -webkit-box-shadow: 0 0 0 0 rgba(244, 68, 56, 0);
-    box-shadow: 0 0 0 0 rgba(244, 68, 56, 0);
+    -webkit-box-shadow: 0 0 0 0 rgba(0, 92, 169, 0);
+    box-shadow: 0 0 0 0 rgba(0, 92, 169, 0);
   }
 }
 @keyframes cir36 {
@@ -1880,7 +1880,7 @@ span {
   top: 30px;
   bottom: 0px;
   right: 0;
-  background: rgba(235, 51, 0, 0.6);
+  background: rgba(0, 92, 169, 0.6);
   transition: -webkit-transform 0.4s ease;
   transition: transform 0.4s ease;
   transition: transform 0.4s ease, -webkit-transform 0.4s ease;
@@ -1933,7 +1933,7 @@ span {
   top: 0;
   right: 0;
   left: 0;
-  background: rgba(235, 51, 0, 0.38);
+  background: rgba(0, 92, 169, 0.38);
   width: 100%;
   height: 100%;
 }
@@ -1987,7 +1987,7 @@ span {
   width: 100%;
   height: 100%;
   content: "";
-  background: linear-gradient(90deg, #1D1D1D 0%, #EB3300 100%);
+  background: linear-gradient(90deg, #1D1D1D 0%, #005CA9 100%);
   border-radius: 8px;
 }
 .gt-cta-offer-wrapper .line-shape {
@@ -5163,12 +5163,12 @@ span {
   border-radius: 50%;
   border-radius: 77px;
   border: 2px solid var(--gt-theme);
-  background: rgba(235, 51, 0, 0.24);
+  background: rgba(0, 92, 169, 0.24);
 }
 .gt-hero-2 .gt-hero-content .gt-hero-button .video-btn.ripple::before, .gt-hero-2 .gt-hero-content .gt-hero-button .video-btn.ripple::after {
   width: 70px;
   height: 70px;
-  box-shadow: 0 0 0 0 rgba(235, 51, 0, 0.5);
+  box-shadow: 0 0 0 0 rgba(0, 92, 169, 0.5);
 }
 
 .hero-bg {
@@ -9632,7 +9632,7 @@ span {
   top: 0;
   top: 0px;
   right: 0;
-  background: linear-gradient(0deg, rgba(235, 51, 0, 0.48) 0%, rgba(235, 51, 0, 0.48) 100%);
+  background: linear-gradient(0deg, rgba(0, 92, 169, 0.48) 0%, rgba(0, 92, 169, 0.48) 100%);
   transition: -webkit-transform 0.4s ease;
   transition: transform 0.4s ease;
   transition: transform 0.4s ease, -webkit-transform 0.4s ease;
@@ -9726,7 +9726,7 @@ span {
   width: 100%;
   height: 100%;
   content: "";
-  background: linear-gradient(0deg, rgba(235, 51, 0, 0.48) 0%, rgba(235, 51, 0, 0.48) 100%);
+  background: linear-gradient(0deg, rgba(0, 92, 169, 0.48) 0%, rgba(0, 92, 169, 0.48) 100%);
   transform: scale(1, 0);
   transition: transform 500ms ease;
   transform-origin: bottom center;
