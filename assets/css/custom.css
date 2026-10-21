@@ -1,0 +1,81 @@
+/* ==========================================================
+   KFZ27 custom styles (loaded after main.css)
+   ========================================================== */
+
+/* ---------- Leistungen mega menu (desktop, >= 1200px) ---------- */
+/* The parent <li> is static so the dropdown positions against
+   the header and can span the standard .container width. */
+.header-main .main-menu ul li.has-mega {
+  position: static;
+}
+
+.header-main .main-menu ul li .submenu.mega-menu {
+  top: 100%;
+  left: 0;
+  right: 0;
+  margin-inline: auto;
+  width: 1140px;
+  max-width: calc(100% - 24px);
+  padding: 30px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 6px 30px;
+}
+
+@media (min-width: 1400px) {
+  .header-main .main-menu ul li .submenu.mega-menu {
+    width: 1320px;
+  }
+}
+
+/* invisible bridge so the menu stays open while moving the mouse down */
+.header-main .main-menu ul li .submenu.mega-menu::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 100%;
+  height: 20px;
+}
+
+.header-main .main-menu ul li .submenu.mega-menu li a {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 14px;
+  padding: 8px 12px;
+  line-height: 1.4;
+  text-transform: none;
+}
+
+.header-main .main-menu ul li .submenu.mega-menu li a::before {
+  display: none;
+}
+
+.header-main .main-menu ul li .submenu.mega-menu li:hover > a {
+  margin-left: 0;
+}
+
+/* Icon slot: put an <img> or <svg> inside .mega-icon.
+   While it only contains a comment it is :empty and hidden. */
+.mega-icon {
+  flex: 0 0 44px;
+  width: 44px;
+  height: 44px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid var(--gt-theme);
+  border-radius: 4px;
+}
+
+.mega-icon:empty {
+  display: none;
+}
+
+.mega-icon img,
+.mega-icon svg {
+  width: 30px;
+  height: 30px;
+  object-fit: contain;
+}
