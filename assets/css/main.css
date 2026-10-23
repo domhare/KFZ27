@@ -236,7 +236,7 @@ h6 {
   padding: 0;
   color: var(--gt-header);
   transition: all 0.4s ease-in-out;
-  text-transform: capitalize;
+  text-transform: none;
 }
 
 h1 {
@@ -599,6 +599,7 @@ span {
 
 .gt-about-wrapper-2 {
   margin-bottom: 15px;
+  padding-top: 12px;
 }
 .gt-about-wrapper-2 .gt-about-content .gt-about-text {
   margin-top: 20px;
@@ -649,6 +650,15 @@ span {
   display: flex;
   align-items: center;
   gap: 16px;
+}
+.gt-about-wrapper-2 .gt-about-content .gt-info-items .gt-client-items .gt-client-image {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 56px;
+  height: 56px;
+  font-size: 40px;
+  color: var(--gt-theme);
 }
 .gt-about-wrapper-2 .gt-about-content .gt-info-items .gt-client-items .gt-content h4 {
   font-size: 20px;
@@ -2953,6 +2963,10 @@ span {
 .gt-why-choose-wrapper .gt-why-choose-content.style-2 .gt-icon-items li .content {
   max-width: 180px;
 }
+.gt-why-choose-wrapper .gt-why-choose-content.style-2 .gt-icon-items li .icon i {
+  font-size: 48px;
+  color: var(--gt-theme);
+}
 .gt-why-choose-wrapper .gt-why-choose-content.style-2 .gt-icon-items li .content h4 {
   color: var(--gt-white);
 }
@@ -2976,6 +2990,13 @@ span {
   padding: 24px 18px;
   max-width: 175px;
   width: 100%;
+}
+.gt-why-choose-wrapper .gt-why-choose-content.style-2 .gt-feature-list-box .client-box .client-logo {
+  width: 100%;
+  max-width: 120px;
+  padding: 8px;
+  border-radius: 4px;
+  background-color: var(--gt-white);
 }
 .gt-why-choose-wrapper .gt-why-choose-content.style-2 .gt-feature-list-box .client-box h3 {
   font-size: 18px;
@@ -3050,6 +3071,42 @@ span {
 }
 .marquee-inner.to-right {
   animation: marqueeRight 25s linear infinite;
+}
+
+/* Home page band filled from the CSV (marquee.js sets the duration from the list length) */
+#csv-marquee .marquee-inner {
+  left: 0;
+  right: auto;
+  width: max-content;
+}
+#csv-marquee .marquee-inner.to-left {
+  animation: csvMarqueeLeft 60s linear infinite;
+}
+#csv-marquee .marquee-inner.to-right {
+  animation: csvMarqueeRight 120s linear infinite;
+}
+#csv-marquee .text-slider {
+  text-transform: uppercase;
+}
+#csv-marquee .text-slider i {
+  margin: 0 14px 0 44px;
+  font-size: 22px;
+}
+@keyframes csvMarqueeLeft {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-33.3333%);
+  }
+}
+@keyframes csvMarqueeRight {
+  from {
+    transform: translateX(-33.3333%);
+  }
+  to {
+    transform: translateX(0);
+  }
 }
 
 @keyframes marqueeRight {
@@ -4544,6 +4601,13 @@ span {
   background-color: var(--gt-theme);
   color: var(--gt-white);
 }
+.sticky.header-2 .header-right .header-right-icon .cart-icon {
+  background-color: var(--gt-theme);
+  color: var(--gt-white);
+}
+.sticky.header-2 .header-right .header-right-icon .cart-icon:hover {
+  background-color: var(--gt-yellow);
+}
 .sticky.header-2.header-3 .header-right .gt-theme-btn .gt-text-btn {
   background-color: var(--gt-theme);
   color: var(--gt-white);
@@ -4727,7 +4791,7 @@ span {
   color: var(--gt-white);
   font-size: 72px;
   position: relative;
-  text-transform: capitalize;
+  text-transform: none;
   z-index: 9;
   font-weight: 800;
 }
@@ -7786,7 +7850,7 @@ span {
   display: none;
 }
 .gt-section-title h2 {
-  text-transform: capitalize;
+  text-transform: none;
 }
 
 .gt-section-title-area {
@@ -9080,6 +9144,15 @@ span {
 .gt-shop-inner-wrapper .gt-shop-sidebar-area .gt-shop-items .gt-catagory-list li:hover a {
   color: var(--gt-white);
 }
+#werkzeug-kategorien li {
+  cursor: pointer;
+}
+.gt-shop-inner-wrapper .gt-shop-sidebar-area .gt-shop-items .gt-catagory-list li.active {
+  background-color: var(--gt-theme);
+}
+.gt-shop-inner-wrapper .gt-shop-sidebar-area .gt-shop-items .gt-catagory-list li.active a {
+  color: var(--gt-white);
+}
 .gt-shop-inner-wrapper .gt-shop-sidebar-area .gt-shop-items .gt-post-list li {
   display: flex;
   align-items: center;
@@ -9093,6 +9166,17 @@ span {
   transform: scale(1.02);
   transition: all 1.5s ease-out;
   border-radius: 4px;
+}
+.gt-shop-inner-wrapper .gt-shop-sidebar-area .gt-shop-items .gt-post-list li .gt-thumb {
+  flex-shrink: 0;
+  width: 70px;
+  height: 70px;
+  background-color: var(--gt-bg);
+}
+.gt-shop-inner-wrapper .gt-shop-sidebar-area .gt-shop-items .gt-post-list li .gt-thumb img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
 }
 .gt-shop-inner-wrapper .gt-shop-sidebar-area .gt-shop-items .gt-post-list li .gt-content .gt-star {
   color: var(--gt-yellow);
